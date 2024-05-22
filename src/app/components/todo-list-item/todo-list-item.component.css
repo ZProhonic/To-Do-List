@@ -1,0 +1,42 @@
+.todo-list-item {
+    background: white;
+    margin-bottom: 10px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.completed .task,
+.completed .duration,
+.completed .priority {
+    text-decoration: line-through;
+}
+  
+  .complete-button {
+    border: 1px solid #ff69b4;
+    border-radius: 3px;
+    background: none;
+    color: #ff69b4;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+
+  .remove-button {
+    margin-left: auto;
+  }
+  
+  span {
+    margin-right: 10px;
+  }
+  
+  .priority.high-priority {
+    color: crimson;
+  }
+  
+  .priority.low-priority {
+    color: darkgoldenrod;
+  }
+
+
+  

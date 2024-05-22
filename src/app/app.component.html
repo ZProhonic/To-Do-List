@@ -1,0 +1,16 @@
+<div class="main-container">
+  <header>
+    <h1>To-Do List</h1>
+    <p>Manage all of your to-dos all in one convenient web app!</p>
+  </header>
+
+
+  <div class="todo-list">
+    <ol>
+      <li *ngFor="let todo of todos">
+        <app-todo-list-item [todo]="todo" (removetodo)="removeTodo($event)"></app-todo-list-item>
+      </li>
+    </ol>
+    <app-todo-list-form (save)="addTodo($event)"></app-todo-list-form>
+  </div>
+</div>

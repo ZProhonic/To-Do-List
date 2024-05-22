@@ -1,0 +1,10 @@
+<div class="todo-list-item" [ngClass]="{'completed': todo.completed}">
+    <button class="complete-button" *ngIf="!todo.completed" (click)="completeTask()">Complete</button>
+    <span class="task" >{{ todo.task }}</span>
+    <span class="duration">{{ todo.duration }} mins</span>
+    <span class="priority" *ngIf="todo.priority && todo.priority !== 'NORMAL'"
+        [ngClass]="{'high-priority': todo.priority === 'HIGH', 'low-priority': todo.priority === 'LOW'}">
+        {{ todo.priority === 'HIGH' ? '↑ High Priority' : '↓ Low Priority' }}
+    </span>
+    <button class="remove-button" (click)="onRemoveTodo()">X</button>
+</div>
